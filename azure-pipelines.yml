@@ -1,4 +1,6 @@
 # Starter pipeline
+
+
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -11,10 +13,15 @@ pool:
 
 steps:
 - task: Maven@3
-  displayName: 'Maven pom.xml'
   inputs:
     mavenPomFile: 'pom.xml'
-    options: 'azure-functions:package -e'
+    publishJUnitResults: false
+    javaHomeOption: 'JDKVersion'
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: false
+    options: 'azure-functions:package'
 
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
