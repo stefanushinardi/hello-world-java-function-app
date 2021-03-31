@@ -12,7 +12,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>11</java.version>
-        <azure.functions.maven.plugin.version>1.9.2</azure.functions.maven.plugin.version>
+        <azure.functions.maven.plugin.version>1.10.0</azure.functions.maven.plugin.version>
         <azure.functions.java.library.version>1.4.0</azure.functions.java.library.version>
         <functionAppName>java-vscode-create-1617136822764</functionAppName>
         <stagingDirectory>${project.build.directory}/azure-functions/${functionAppName}</stagingDirectory>
